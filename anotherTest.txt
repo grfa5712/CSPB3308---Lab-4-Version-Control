@@ -1,0 +1,2 @@
+Here is another test file for the testing-new-files branch
+
