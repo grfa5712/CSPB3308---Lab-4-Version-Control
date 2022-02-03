@@ -1,0 +1,76 @@
+# CSPB3308---Lab-4-Version-Control
+
+# Grant Fairbairn - grfa5712
+
+### Partner: Ron Durham - rodu4835
+
+# Completion Log showing the merge conflict and resolution
+
+
+# This is my merge conflict and resolution in Steps 25-29:
+
+jovyan@jupyter-grfa5712:~/Grant/3308/CSPB3308-Week_4/CSPB3308---Lab-4-Version-Control$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+jovyan@jupyter-grfa5712:~/Grant/3308/CSPB3308-Week_4/CSPB3308---Lab-4-Version-Control$ git pull
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+jovyan@jupyter-grfa5712:~/Grant/3308/CSPB3308-Week_4/CSPB3308---Lab-4-Version-Control$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+jovyan@jupyter-grfa5712:~/Grant/3308/CSPB3308-Week_4/CSPB3308---Lab-4-Version-Control$ vi README.md 
+jovyan@jupyter-grfa5712:~/Grant/3308/CSPB3308-Week_4/CSPB3308---Lab-4-Version-Control$ git add README.md 
+jovyan@jupyter-grfa5712:~/Grant/3308/CSPB3308-Week_4/CSPB3308---Lab-4-Version-Control$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   README.md
+
+jovyan@jupyter-grfa5712:~/Grant/3308/CSPB3308-Week_4/CSPB3308---Lab-4-Version-Control$ git commit
+[master 0b1e84f] Step 28 - Merge branch 'master' of https://github.com/grfa5712/CSPB3308---Lab-4-Version-Control
+jovyan@jupyter-grfa5712:~/Grant/3308/CSPB3308-Week_4/CSPB3308---Lab-4-Version-Control$ git log
+commit 0b1e84f158b9b672c0295afb3c30c726f23a3343 (HEAD -> master)
+Merge: 92b5faa 2bd1936
+Author: Grant Fairbairn <grfa5712@colorado.edu>
+Date:   Thu Feb 3 02:54:45 2022 +0000
+
+    Step 28 - Merge branch 'master' of https://github.com/grfa5712/CSPB3308---Lab-4-Version-Control
+
+
+# This is the full log using oneline:
+
+jovyan@jupyter-grfa5712:~/Grant/3308/CSPB3308-Week_4/CSPB3308---Lab-4-Version-Control$ git log --oneline
+
+f9e59be (HEAD -> master, origin/master) Step 29 commit
+0b1e84f Step 28 - Merge branch 'master' of https://github.com/grfa5712/CSPB3308---Lab-4-Version-Control
+2bd1936 changed text size of partner info
+36c61f2 Added partner info to README
+92b5faa Step 23 - setting up a merge conflict
+70c6c91 Merge branch 'testing-new-files' - Step 12
+ffed7bd Committing new changes to AdditionalInfo.txt and SecondAddition.txt for Step 11
+acf4c14 (origin/testing-new-files, testing-new-files) Committing new files for Step 9
+f0455cf (tag: v0.0.1) Adding files for Step 5 in Lab 4
+c3f6f10 First commit - Step 4
